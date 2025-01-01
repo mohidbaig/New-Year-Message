@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Year Surprise</title>
+    <style>
+        body {
+            font-family: 'Arial, sans-serif';
+            text-align: center;
+            background-color: #ffe6f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #ff99cc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background-color: #ff66b2;
+        }
+        .message {
+            font-size: 24px;
+            color: #cc0052;
+            margin-top: 20px;
+        }
+        .lavender {
+            position: absolute;
+            width: 100px;
+            top: 20%;
+            left: 10%;
+        }
+        .heart {
+            position: absolute;
+            width: 50px;
+            animation: float 2s infinite ease-in-out;
+        }
+        .heart-1 {
+            top: 30%;
+            left: 50%;
+        }
+        .heart-2 {
+            top: 40%;
+            left: 60%;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Lavender_flower_close_up.jpg" alt="Lavender" class="lavender">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Red_heart.svg" alt="Heart" class="heart heart-1">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Red_heart.svg" alt="Heart" class="heart heart-2">
+    <button onclick="showMessage()">Tap for a Surprise!</button>
+    <div id="message" class="hidden">
+        <p class="message">Happy New Year, my dearest! Wishing you endless love, joy, and success this year!</p>
+    </div>
+    <script>
+        function showMessage() {
+            document.getElementById('message').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
